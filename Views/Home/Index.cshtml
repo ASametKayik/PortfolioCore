@@ -1,0 +1,404 @@
+@model PortfolioCore.Models.PortfolioHomeViewModel
+@{
+    ViewData["Title"] = "Abdul Samet Kayık - .NET Developer Portfolyo";
+}
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div class="hero-container">
+        <div class="hero-intro-column">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Yeni Projelere & .NET Çalışmalarına Açık</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Merhaba, ben</span>
+                <span class="hero-name-highlight">@Model.Name</span>
+            </h1>
+            <div class="hero-subtitle-tag">
+                <i class="fa-solid fa-wand-magic-sparkles text-gradient-icon"></i>
+                <h2 class="hero-subtitle-text">@Model.Title</h2>
+            </div>
+            <p class="hero-bio">
+                @Model.Bio
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary-glow">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Projelerimi İnceleyin</span>
+                </a>
+                <a href="#contact" class="btn-outline-glass">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>İletişime Geçin</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">@Model.CompletedProjectsCount+</span>
+                    <span class="stat-label">Tamamlanan Proje</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2 Staj</span>
+                    <span class="stat-label">Kurumsal Deneyim</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">B2 Level</span>
+                    <span class="stat-label">İngilizce (Hazırlık)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">DGS</span>
+                    <span class="stat-label">Sakarya Üni Yazılım Müh.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-code-card">
+                <div class="code-header">
+                    <span class="code-dot dot-red"></span>
+                    <span class="code-dot dot-yellow"></span>
+                    <span class="code-dot dot-green"></span>
+                    <span class="code-title">PortfolioService.cs</span>
+                </div>
+                <div class="code-body">
+                    <span class="kw">public class</span> <span class="type">DeveloperProfile</span><br />
+                    {<br />
+                    &nbsp;&nbsp;<span class="kw">public string</span> Name => <span class="str">"@Model.Name"</span>;<br />
+                    &nbsp;&nbsp;<span class="kw">public string</span> Education => <span class="str">"Sakarya Üni Yazılım Müh."</span>;<br />
+                    &nbsp;&nbsp;<span class="kw">public string</span> English => <span class="str">"B2 Upper-Intermediate"</span>;<br />
+                    &nbsp;&nbsp;<span class="kw">public string[]</span> TechStack => <span class="kw">new</span>[] {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"ASP.NET Core MVC"</span>, <span class="str">"C#"</span>,<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"EF Core"</span>, <span class="str">"PostgreSQL"</span>, <span class="str">"SQL Server"</span><br />
+                    &nbsp;&nbsp;};<br />
+                    &nbsp;&nbsp;<span class="kw">public bool</span> IsAvailableForWork() => <span class="kw">true</span>;<br />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="section-header">
+        <span class="section-tag">HAKKIMDA</span>
+        <h2 class="section-title">Tutkulu & Öğrenmeye Açık Yazılım Geliştirici</h2>
+        <p class="section-subtitle">
+            Problem çözmeyi seven, ekip çalışmasına uyumlu ve verilen görevi titizlikle tamamlayan bir .NET Yazılım Geliştiricisiyim.
+        </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: var(--radius-lg); backdrop-filter: blur(10px);">
+            <div style="width: 50px; height: 50px; background: rgba(6, 182, 212, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 1.4rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">ASP.NET Core & MVC Uzmanlığı</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                AcunMedya Akademi ve staj süreçlerimde ASP.NET MVC, C#, Razor Views ve Entity Framework ile dinamik, güvenli web uygulamaları tasarladım.
+            </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: var(--radius-lg); backdrop-filter: blur(10px);">
+            <div style="width: 50px; height: 50px; background: rgba(139, 92, 246, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-violet); font-size: 1.4rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">İlişkisel Veritabanı & CRUD</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                PostgreSQL, pgAdmin 4 ve SQL Server mimarilerinde Entity Framework ORM kullanarak veri odaklı sistemler ve veritabanı sorguları geliştirmekteyim.
+            </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: var(--radius-lg); backdrop-filter: blur(10px);">
+            <div style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-emerald); font-size: 1.4rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Sürekli Gelişim & Takım Uyumu</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Hızlı kavrama yeteneği, güçlü iletişim, problem çözme tutkusu ve .NET teknolojilerinde sürekli kendimi güncelleme prensibi ile çalışıyorum.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="section-header">
+        <span class="section-tag">PORTFOLYO & PROJELER</span>
+        <h2 class="section-title">Öne Çıkan Çalışmalarım</h2>
+        <p class="section-subtitle">
+            ASP.NET MVC, C#, Entity Framework ve web teknolojileri ile geliştirdiğim projeler.
+        </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+        <button type="button" class="filter-btn active" data-filter="all">Tümü</button>
+        <button type="button" class="filter-btn" data-filter="dotnet">.NET & MVC</button>
+        <button type="button" class="filter-btn" data-filter="frontend">Frontend & Web</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+        @foreach (var project in Model.AllProjects)
+        {
+            <div class="project-card" data-category="@project.Category">
+                <div class="project-img-wrapper">
+                    <img src="@project.ImageUrl" alt="@project.Title" class="project-img" />
+                    <span class="project-category-badge">@project.CategoryName</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">@project.Title</h3>
+                    <p class="project-desc">@project.ShortDescription</p>
+                    <div class="tech-tags">
+                        @foreach (var tech in project.Technologies)
+                        {
+                            <span class="tech-tag">@tech</span>
+                        }
+                    </div>
+                    <div class="project-actions">
+                        <a href="/project/@project.Id" class="project-link">
+                            <span>Detaylı İncele</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="@project.GithubUrl" target="_blank" class="project-link" style="color: var(--text-muted);" title="GitHub">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- Skills Section (Digital Skills) -->
+<section id="skills" class="section">
+    <div class="section-header">
+        <span class="section-tag">DIGITAL SKILLS</span>
+        <h2 class="section-title">Teknoloji & Beceri Seti</h2>
+        <p class="section-subtitle">
+            CV dijital becerilerim ve bu projede kullanılan tüm backend, frontend, veritabanı teknolojileri.
+        </p>
+    </div>
+
+    <div class="skills-grid">
+        @foreach (var cat in Model.SkillCategories)
+        {
+            <div class="skill-category-card">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">
+                        <i class="@cat.IconClass"></i>
+                    </div>
+                    <h3 class="skill-cat-title">@cat.CategoryName</h3>
+                </div>
+
+                @foreach (var skill in cat.Skills)
+                {
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span><i class="@skill.Icon" style="margin-right: 0.4rem; color: var(--accent-cyan);"></i> @skill.Name</span>
+                            <span style="color: var(--accent-violet);">%@skill.ProficiencyPercentage (@skill.LevelName)</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-target-width="@(skill.ProficiencyPercentage)%" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+    <div class="section-header">
+        <span class="section-tag">DENEYİM</span>
+        <h2 class="section-title">Staj & Çalışma Geçmişi</h2>
+        <p class="section-subtitle">
+            AcunMedya Akademi ve Tekno Mektep staj süreçlerimde edindiğim kurumsal yazılım deneyimlerim.
+        </p>
+    </div>
+
+    <div class="timeline">
+        @foreach (var exp in Model.Experiences)
+        {
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <span class="timeline-period">@exp.Period</span>
+                        <span class="timeline-badge">@exp.BadgeText</span>
+                    </div>
+                    <h3 class="timeline-role">@exp.Role</h3>
+                    <div class="timeline-company">@exp.Company <span style="font-size: 0.85rem; color: var(--text-dim);">(@exp.Location)</span></div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">@exp.Description</p>
+
+                    @if (exp.Highlights != null && exp.Highlights.Any())
+                    {
+                        <ul class="timeline-highlights">
+                            @foreach (var hl in exp.Highlights)
+                            {
+                                <li>@hl</li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- Education & Certifications Section -->
+<section id="education" class="section">
+    <div class="section-header">
+        <span class="section-tag">EĞİTİM & SERTİFİKALAR</span>
+        <h2 class="section-title">Akademik Geçmiş & Sertifikalar</h2>
+        <p class="section-subtitle">
+            Tamamladığım akademik programlar ve aldığım mesleki sertifikalar.
+        </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+        <!-- Educations -->
+        <div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent-cyan); display: flex; align-items: center; gap: 0.6rem;">
+                <i class="fa-solid fa-graduation-cap"></i> Eğitim Geçmişi
+            </h3>
+            @foreach (var edu in Model.Educations)
+            {
+                <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 1.25rem; backdrop-filter: blur(10px);">
+                    <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; font-family: var(--font-code);">@edu.Period</div>
+                    <h4 style="font-size: 1.15rem; font-weight: 700; margin: 0.3rem 0;">@edu.Degree</h4>
+                    <div style="color: var(--text-muted); font-size: 0.95rem;">@edu.Institution <span style="font-size: 0.85rem; color: var(--text-dim);">(@edu.Location)</span></div>
+                </div>
+            }
+        </div>
+
+        <!-- Certifications & References -->
+        <div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent-violet); display: flex; align-items: center; gap: 0.6rem;">
+                <i class="fa-solid fa-certificate"></i> Sertifikalar & Referans
+            </h3>
+            @foreach (var cert in Model.Certifications)
+            {
+                <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.25rem 1.5rem; border-radius: var(--radius-lg); margin-bottom: 1rem; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 42px; height: 42px; background: rgba(139, 92, 246, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--accent-violet); font-size: 1.2rem; flex-shrink: 0;">
+                        <i class="@cert.Icon"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.2rem;">@cert.Name</h4>
+                        <div style="color: var(--text-dim); font-size: 0.85rem;">Veren Kurum: <strong style="color: var(--text-muted);">@cert.Provider</strong></div>
+                    </div>
+                </div>
+            }
+
+            @if (Model.References != null && Model.References.Any())
+            {
+                <div style="margin-top: 2rem;">
+                    <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: var(--accent-emerald); display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-user-check"></i> Referans
+                    </h4>
+                    @foreach (var rf in Model.References)
+                    {
+                        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.25rem 1.5rem; border-radius: var(--radius-lg); backdrop-filter: blur(10px);">
+                            <div style="font-size: 1.1rem; font-weight: 700;">@rf.Name</div>
+                            <div style="color: var(--accent-cyan); font-size: 0.9rem; font-weight: 600;">@rf.Role - @rf.Company</div>
+                            <div style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.5rem;">
+                                Tel: @rf.Phone | E-Posta: @rf.Email
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="section-header">
+        <span class="section-tag">İLETİŞİM</span>
+        <h2 class="section-title">İletişime Geçin</h2>
+        <p class="section-subtitle">
+            Projeleriniz, iş fırsatları veya sorularınız için mesaj gönderebilir veya doğrudan ulaşabilirsiniz.
+        </p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info-card">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.5rem;">İletişim Bilgileri</h3>
+
+            <div class="contact-detail-item">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <div class="contact-label">E-POSTA ADRESİ</div>
+                    <div class="contact-value"><a href="mailto:@Model.Email" style="color: inherit; text-decoration: none;">@Model.Email</a></div>
+                </div>
+            </div>
+
+            <div class="contact-detail-item">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <div class="contact-label">TELEFON</div>
+                    <div class="contact-value">@Model.Phone</div>
+                </div>
+            </div>
+
+            <div class="contact-detail-item">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <div class="contact-label">KONUM</div>
+                    <div class="contact-value">@Model.Location</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border);">
+                <div class="contact-label" style="margin-bottom: 0.75rem;">PROFİLLERİM</div>
+                <div class="social-links">
+                    <a href="@Model.GithubUrl" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="@Model.LinkedinUrl" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:@Model.Email" class="social-btn" title="E-Posta"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 2.5rem; backdrop-filter: blur(10px);">
+            <div id="formAlert" class="alert-toast"></div>
+
+            <form id="contactForm">
+                @Html.AntiForgeryToken()
+                
+                <div class="form-group">
+                    <label class="form-label" for="FullName">Adınız ve Soyadınız *</label>
+                    <input type="text" id="FullName" name="FullName" class="form-control-custom" placeholder="Örn: Ahmet Yılmaz" required />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Email">E-Posta Adresiniz *</label>
+                    <input type="email" id="Email" name="Email" class="form-control-custom" placeholder="Örn: ahmet@example.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Subject">Konu *</label>
+                    <input type="text" id="Subject" name="Subject" class="form-control-custom" placeholder="İş Fırsatı / Proje Görüşmesi" required />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Message">Mesajınız *</label>
+                    <textarea id="Message" name="Message" class="form-control-custom" placeholder="Mesajınız..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary-glow" style="width: 100%; justify-content: center; padding: 0.9rem;">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Mesajı Gönder</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

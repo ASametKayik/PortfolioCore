@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Abdul Samet Kayık | .NET Developer Portfolyo</title>
+    <meta name="description" content="Abdul Samet Kayık - .NET Developer & Web Software Specialist Portfolyo Web Sitesi. ASP.NET Core MVC, C#, Entity Framework Core, PostgreSQL." />
+    
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Glassmorphism Navbar -->
+    <header>
+        <nav class="navbar-custom">
+            <div class="navbar-container">
+                <a class="nav-brand" href="#hero">
+                    <span class="brand-badge">.NET CORE</span>
+                    <span>SAMET.DEV</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link-item active">Ana Sayfa</a></li>
+                    <li><a href="#about" class="nav-link-item">Hakkımda</a></li>
+                    <li><a href="#projects" class="nav-link-item">Projeler</a></li>
+                    <li><a href="#skills" class="nav-link-item">Beceriler</a></li>
+                    <li><a href="#experience" class="nav-link-item">Deneyim</a></li>
+                    <li><a href="#education" class="nav-link-item">Eğitim</a></li>
+                    <li><a href="#contact" class="nav-link-item">İletişim</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Temayı Değiştir">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <a href="#contact" class="btn-primary-glow">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>İletişime Geç</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Modern Footer -->
+    <footer class="footer-custom">
+        <div class="footer-container">
+            <div>
+                <a class="nav-brand" href="#hero" style="margin-bottom: 0.5rem;">
+                    <span class="brand-badge">.NET CORE</span>
+                    <span>ABDUL SAMET KAYIK</span>
+                </a>
+                <p style="color: var(--text-dim); font-size: 0.9rem; max-width: 450px; margin-top: 0.5rem;">
+                    .NET Developer & Web Yazılım Uzmanı. İstanbul Üniversitesi-Cerrahpaşa Bilgisayar Programcılığı Mezunu.
+                </p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/ASametKayik" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abdulsametkayik/" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:asametkayik@gmail.com" class="social-btn" title="E-Posta"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; @DateTime.Now.Year Abdul Samet Kayık. Tüm hakları saklıdır. ASP.NET Core 10 MVC & PostgreSQL ile geliştirildi.</p>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

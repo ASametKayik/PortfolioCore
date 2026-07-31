@@ -1,0 +1,75 @@
+@model PortfolioCore.Models.ProjectModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<section class="section" style="padding-top: 8rem;">
+    <div style="margin-bottom: 2rem;">
+        <a href="/#projects" class="btn-outline-glass" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Tüm Projelere Dön</span>
+        </a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start;">
+        <div>
+            <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--glass-border); margin-bottom: 2rem;">
+                <img src="@Model.ImageUrl" alt="@Model.Title" style="width: 100%; height: auto; display: block;" />
+            </div>
+
+            <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem;">@Model.Title</h1>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">
+                @Model.FullDescription
+            </p>
+
+            <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.75rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.75rem;">
+                    <i class="fa-solid fa-microchip" style="margin-right: 0.4rem;"></i> Mimari & Teknik Notlar
+                </h3>
+                <p style="color: var(--text-main); font-size: 0.95rem;">
+                    @Model.ArchitectureNotes
+                </p>
+            </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius-xl); padding: 2rem; backdrop-filter: blur(10px); position: sticky; top: 100px;">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">Proje Bilgileri</h3>
+
+            <div style="margin-bottom: 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">KATEGORİ</div>
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--accent-cyan);">@Model.CategoryName</div>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">MÜŞTERİ / ŞİRKET</div>
+                <div style="font-size: 1.05rem; font-weight: 600;">@Model.ClientName</div>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">PROJE SÜRESİ</div>
+                <div style="font-size: 1.05rem; font-weight: 600;">@Model.Duration</div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">KULLANILAN TEKNOLOJİLER</div>
+                <div class="tech-tags">
+                    @foreach (var tech in Model.Technologies)
+                    {
+                        <span class="tech-tag">@tech</span>
+                    }
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--glass-border);">
+                <a href="@Model.LiveUrl" target="_blank" class="btn-primary-glow" style="justify-content: center;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Canlı Demoyu İncele</span>
+                </a>
+                <a href="@Model.GithubUrl" target="_blank" class="btn-outline-glass" style="justify-content: center;">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Deposu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
