@@ -34,17 +34,18 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]
+    [IgnoreAntiforgeryToken]
     public IActionResult SubmitContact([FromBody] ContactFormModel model)
     {
-        if (!ModelState.IsValid)
+        if (model == null || !ModelState.IsValid)
         {
             var errors = ModelState.Values
                 .SelectMany(v => v.Errors)
                 .Select(e => e.ErrorMessage)
                 .ToList();
 
-            return Json(new { success = false, message = string.Join(" ", errors) });
+            string errorMessage = errors.Any() ? string.Join(" ", errors) : "Lütfen tüm alanları geçerli şekilde doldurunuz.";
+            return Json(new { success = false, message = errorMessage });
         }
 
         var result = _portfolioService.ProcessContactMessage(model);
