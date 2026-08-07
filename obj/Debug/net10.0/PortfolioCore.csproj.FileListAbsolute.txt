@@ -184,4 +184,5 @@
 /Users/semedo/.gemini/antigravity/scratch/PortfolioCore/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/semedo/.gemini/antigravity/scratch/PortfolioCore/obj/Debug/net10.0/PortfolioCore.csproj.AssemblyReference.cache
 /Users/semedo/.gemini/antigravity/scratch/PortfolioCore/obj/Debug/net10.0/Portfoli.35178D50.Up2Date
-/Users/semedo/.gemini/antigravity/scratch/PortfolioCore/obj/Debug/net10.0/compressed/hoz7xaidan-{0}-oskljgvtgt-oskljgvtgt.gz
+/Users/semedo/.gemini/antigravity/scratch/PortfolioCore/obj/Debug/net10.0/PortfolioCore.sourcelink.json
+/Users/semedo/.gemini/antigravity/scratch/PortfolioCore/obj/Debug/net10.0/compressed/hoz7xaidan-{0}-8vci4abu8u-8vci4abu8u.gz
