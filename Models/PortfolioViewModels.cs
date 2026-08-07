@@ -98,7 +98,7 @@ public class PortfolioHomeViewModel
     
     public string Phone { get; set; } = "(+90) 539 945 5872";
     public string Email { get; set; } = "asametkayik@gmail.com";
-    public string Location { get; set; } = "Sakarya / İstanbul, Türkiye";
+    public string Location { get; set; } = "İstanbul / Sakarya, Türkiye";
     public string GithubUrl { get; set; } = "https://github.com/ASametKayik";
     public string LinkedinUrl { get; set; } = "https://www.linkedin.com/in/abdulsametkayik/";
     public string EnglishLevel { get; set; } = "B2 Level (Upper-Intermediate)";
